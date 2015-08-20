@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">RayComposer Device API Documentation
-   &#160;<span id="projectnumber">1.00</span>
+   &#160;<span id="projectnumber">1.40</span>
    </div>
    <div id="projectbrief">Public API for RayComposer laser show DAC interfaces.</div>
   </td>
@@ -231,7 +231,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>RCOK on success, </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>RCOk on success. If an error occured, a negative value indicating one of the RCReturnCode error codes is returned. </dd></dl>
 
 </div>
 </div>
@@ -257,7 +257,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>RCOK on success, </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>RCOk on success. If an error occured, a negative value indicating one of the RCReturnCode error codes is returned. </dd></dl>
 
 </div>
 </div>
@@ -293,8 +293,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>If timeOut is is zero, this function does not wait und returns the number of free buffers immediately. If timeOut is negative, this function will wait for a buffer to bocome without timing out.</p>
-<dl class="section return"><dt>Returns</dt><dd>The number of free buffers. If an error occured, a negative value indicating one of the RCReturnCode error codes. </dd></dl>
+<p>If timeOut is is zero, this function does not wait und returns the number of free buffers immediately. If timeOut is negative, this function will wait for a buffer to become free without timing out.</p>
+<dl class="section return"><dt>Returns</dt><dd>The number of free buffers. If an error occured, a negative value indicating one of the RCReturnCode error codes is returned. </dd></dl>
 
 </div>
 </div>
@@ -319,7 +319,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The maximum sampling rate of the device in Hz. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The maximum sampling rate of the device in Hz. If an error occured, a negative value indicating one of the RCReturnCode error codes is returned. </dd></dl>
 
 </div>
 </div>
@@ -373,11 +373,11 @@ Functions</h2></td></tr>
     <tr><td class="paramname">points</td><td>pointer to an array of <a class="el" href="struct_r_c_point.html" title="Vector Data Structure. ">RCPoint</a> structures containing the vector data; </td></tr>
     <tr><td class="paramname">count</td><td>number of points that should be written </td></tr>
     <tr><td class="paramname">speed</td><td>sampling rate in Hz that should be used for this frame </td></tr>
-    <tr><td class="paramname">repeat</td><td>how often this frame should be repeated. If 0, the frame will be repeated continuosly until a new frame is written. </td></tr>
+    <tr><td class="paramname">repeat</td><td>how often this frame should be repeated. If 0, the frame will be repeated continuously until a new frame is written. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>RCOK on success, </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>RCOk on success. If an error occured, a negative value indicating one of the RCReturnCode error codes is returned. </dd></dl>
 
 </div>
 </div>
@@ -386,7 +386,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 2 2015 11:46:48 for RayComposer Device API Documentation by
+    <li class="footer">Generated on Thu Aug 20 2015 16:42:01 for RayComposer Device API Documentation by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

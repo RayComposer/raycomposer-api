@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">RayComposer Device API Documentation
-   &#160;<span id="projectnumber">1.00</span>
+   &#160;<span id="projectnumber">1.40</span>
    </div>
    <div id="projectbrief">Public API for RayComposer laser show DAC interfaces.</div>
   </td>
@@ -108,11 +108,8 @@ Introduction</h1>
 <p><a href="http://www.raycomposer.de">Copyright &copy;2015 RayComposer - R. Adams</a>.</p>
 <h1><a class="anchor" id="Code"></a>
 Example</h1>
-<p>Quick Example in plain C. This code enumerates all devices and displays a list. If a device is found the device will be opened, started and 1000 frames containing a circle will be display. Then the device will be stoped, closed and the program will exit. </p><div class="fragment"><div class="line"><span class="comment">/* Demo code for using the RayComposer Device API</span></div>
-<div class="line"><span class="comment"> * (C) 2015 RayComposer - Robin Adams</span></div>
-<div class="line"><span class="comment"> */</span></div>
-<div class="line"></div>
-<div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<p>Quick Example in plain C. This code enumerates all devices and displays a list. If a device is found the device will be opened, started and 1000 frames containing a circle will be display. Then the device will be stoped, closed and the program will exit. </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#define _USE_MATH_DEFINES</span></div>
 <div class="line"><span class="preprocessor">#include &lt;math.h&gt;</span></div>
 <div class="line"></div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="rcdev_8h.html">rcdev.h</a>&quot;</span></div>
@@ -187,9 +184,9 @@ Example</h1>
 <div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> pointCount = <span class="keyword">sizeof</span>(points) / <span class="keyword">sizeof</span>(<span class="keyword">struct</span> <a class="code" href="struct_r_c_point.html">RCPoint</a>);</div>
 <div class="line">    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i;</div>
 <div class="line">    <span class="keywordflow">for</span>(i=0; i &lt; pointCount; i++){</div>
-<div class="line">      <span class="keywordtype">double</span> phi = (double)i * M_PI * 2.0 / count;</div>
-<div class="line">      points[i].<a class="code" href="struct_r_c_point.html#aad104cf162e20ac13a0c99b6d1566c43">x</a> = sin(phi) * 32767.5 - 0.5;</div>
-<div class="line">      points[i].y = cos(phi) * 32767.5 - 0.5;</div>
+<div class="line">      <span class="keywordtype">double</span> phi = (double)i * M_PI * 2.0 / pointCount;</div>
+<div class="line">      points[i].<a class="code" href="struct_r_c_point.html#aad104cf162e20ac13a0c99b6d1566c43">x</a> = (<span class="keywordtype">signed</span> short) (sin(phi) * 32767.5 - 0.5);</div>
+<div class="line">      points[i].y = (<span class="keywordtype">signed</span> short) (cos(phi) * 32767.5 - 0.5);</div>
 <div class="line">      points[i].red = 65535;</div>
 <div class="line">      points[i].green = 65535;</div>
 <div class="line">      points[i].blue = 65535;</div>
@@ -236,13 +233,14 @@ Example</h1>
 <div class="line"></div>
 </div><!-- fragment --><h1><a class="anchor" id="License"></a>
 License</h1>
-<p>Premission is granted to use this API, the provided samples and documentation free of charge als long as they are used for controling RayComposer devices. </p>
+<p>Permission is granted to use this API, the provided samples and documentation free of charge als long as they are used for controling RayComposer devices.</p>
+<p>Last Update: 18.08.2015 Fixing some Documentation typos - RA </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 2 2015 11:46:48 for RayComposer Device API Documentation by
+    <li class="footer">Generated on Thu Aug 20 2015 16:42:01 for RayComposer Device API Documentation by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

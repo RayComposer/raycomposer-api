@@ -1,8 +1,5 @@
-/* Demo code for using the RayComposer Device API
- * (C) 2015 RayComposer - Robin Adams
- */
-
 #include <stdio.h>
+#define _USE_MATH_DEFINES
 #include <math.h>
 
 #include "rcdev.h"
@@ -77,9 +74,9 @@ int main(void){
     unsigned int pointCount = sizeof(points) / sizeof(struct RCPoint);
     unsigned int i;
     for(i=0; i < pointCount; i++){
-      double phi = (double)i * M_PI * 2.0 / count;
-      points[i].x = sin(phi) * 32767.5 - 0.5;
-      points[i].y = cos(phi) * 32767.5 - 0.5;
+      double phi = (double)i * M_PI * 2.0 / pointCount;
+      points[i].x = (signed short) (sin(phi) * 32767.5 - 0.5);
+      points[i].y = (signed short) (cos(phi) * 32767.5 - 0.5);
       points[i].red = 65535;
       points[i].green = 65535;
       points[i].blue = 65535;

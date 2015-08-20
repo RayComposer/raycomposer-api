@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">RayComposer Device API Documentation
-   &#160;<span id="projectnumber">1.00</span>
+   &#160;<span id="projectnumber">1.40</span>
    </div>
    <div id="projectbrief">Public API for RayComposer laser show DAC interfaces.</div>
   </td>
@@ -231,7 +231,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The number of universes. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of universes present on the device. If an error occured, a negative value indicating one of the RCReturnCode error codes is returned. </dd></dl>
 
 </div>
 </div>
@@ -296,7 +296,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The number of characters written to universeName. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of characters written to universeName. If an error occured, a negative value indicating one of the RCReturnCode error codes is returned. </dd></dl>
 
 </div>
 </div>
@@ -349,11 +349,11 @@ Functions</h2></td></tr>
     <tr><td class="paramname">universeIndex</td><td>Universe Index. Range is 0 to the number returned by <a class="el" href="group__universes.html#ga9b88e638bab9a489e768bcdd22317ef2" title="Query universe count of device. ">RCUniverseCount()</a> -1 </td></tr>
     <tr><td class="paramname">startChannel</td><td>First channel to write. startChannel 0 is the first DMX channel. </td></tr>
     <tr><td class="paramname">data</td><td>Pointer to dmx value buffer </td></tr>
-    <tr><td class="paramname">count</td><td>Number of channels to read</td></tr>
+    <tr><td class="paramname">count</td><td>Number of channels to write</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The number of characters written to universeName. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>RCOk on success. If an error occured, a negative value indicating one of the RCReturnCode error codes is returned. </dd></dl>
 
 </div>
 </div>
@@ -410,7 +410,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>RCOk on success. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>RCOk on success. If an error occured, a negative value indicating one of the RCReturnCode error codes is returned. </dd></dl>
 
 </div>
 </div>
@@ -446,7 +446,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>RCOk on success. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>RCOk on success. If an error occured, a negative value indicating one of the RCReturnCode error codes is returned. </dd></dl>
 
 </div>
 </div>
@@ -455,7 +455,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 2 2015 11:46:48 for RayComposer Device API Documentation by
+    <li class="footer">Generated on Thu Aug 20 2015 16:42:01 for RayComposer Device API Documentation by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

@@ -28,8 +28,11 @@
   * \include "demo.c"
 
   * \section License
-  * Premission is granted to use this API, the provided samples and documentation free of
+  * Permission is granted to use this API, the provided samples and documentation free of
   * charge als long as they are used for controling RayComposer devices.
+  *
+  * Last Update: 18.08.2015
+  * Fixing some Documentation typos - RA
   */
 
 #ifdef __cplusplus
@@ -168,8 +171,8 @@ typedef int (RCCALL *TRCExit)();
   * The number of devices in the device list is returned.
   * Use RCDeviceID() afterwards to query the device list.
   *
-  * \return The number of devices found. A value smaller then 0
-  * indicates an error.
+  * \return The number of devices found. If an error occured, a negative
+  * value indicating one of the RCReturnCode error codes is returned.
   *
   */
 
@@ -193,7 +196,8 @@ typedef int (RCCALL *TRCEnumerateDevices)();
  * to the deviceId buffer.
  *
  * \return The number of charactes written to deviceId, including
- * terminating nul character.
+ * terminating nul character. If an error occured, a negative value
+ * indicating one of the RCReturnCode error codes is returned.
  */
 int RCAPI RCDeviceID(unsigned int index, char *deviceId, unsigned int maxLength);
 /** Function type definition for RCEnumerateDevices() */
@@ -218,7 +222,7 @@ typedef int (RCCALL *TRCDeviceID)(unsigned int, char *, unsigned int);
  *
  * \return On success, a handle to the device. If the return value
  * is negative an error has occured and the device has not been
- * opened.
+ * opened. The return value indicates one of the RCReturnCode error codes.
  *
  */
 int RCAPI RCOpenDevice(char *deviceId);
@@ -232,8 +236,8 @@ typedef int (RCCALL *TRCOpenDevice)(char *);
  *
  * \param handle Device handle as obtained by RCOpenDevice()
  *
- * \return 0 on success, a negative value on error.
- *
+ * \return RCOk on success. If an error occured, a negative value
+ * indicating one of the RCReturnCode error codes.
  */
 int RCAPI RCCloseDevice(int handle);
 /** Function type definition for RCCloseDevice() */
@@ -252,6 +256,8 @@ typedef int (RCCALL *TRCCloseDevice)(int);
   * \param maxLength Length of the buffer passes as deviceLabel
   *
   * \return The number of characters written to deviceLabel.
+  * If an error occured, a negative value indicating one of the
+  * RCReturnCode error codes is returned.
   */
 int RCAPI RCDeviceLabel(int handle, char *deviceLabel, unsigned int maxLength);
 /** Function type definition for RCDeviceLabel() */
@@ -263,8 +269,11 @@ typedef int (RCCALL *TRCDeviceLabel)(int, char *, unsigned int);
   * passend in deviceLabel.
   *
   * \param handle Device handle as obtained by RCOpenDevice()
-  * \param deviceLabel UTF-8 encoded string containing the device label
+  * \param deviceLabel UTF-8 encoded string containing the device label.
   * The string must be end with a terminating nul character.
+  *
+  * \return RCOk on success. If an error occured, a negative
+  * value indicating one of the RCReturnCode error codes is returned.
   */
 int RCAPI RCSetDeviceLabel(int handle, char *deviceLabel);
 /** Function type definition for RCSetDeviceLabel() */
@@ -285,7 +294,8 @@ typedef int (RCCALL *TRCSetDeviceLabel)(int, char *);
  * the shutter signal.
  *
  * \param handle Device handle as obtained by RCOpenDevice();
- * \return RCOK on success,
+ * \return RCOk on success. If an error occured, a negative
+ * value indicating one of the RCReturnCode error codes is returned.
  *
  */
 int RCAPI RCStartOutput(int handle);
@@ -297,7 +307,8 @@ typedef int (RCCALL *TRCStartOutput)(int);
  * This function stops the laser output and deactivates the shutter signal.
  *
  * \param handle Device handle as obtained by RCOpenDevice();
- * \return RCOK on success,
+ * \return RCOk on success. If an error occured, a negative
+ * value indicating one of the RCReturnCode error codes is returned.
  */
 int RCAPI RCStopOutput(int handle);
 /** Function type definition for RCStopOutput() */
@@ -312,10 +323,10 @@ typedef int (RCCALL *TRCStopOutput)(int);
   *  If timeOut is is zero, this function does not wait und returns the
   *  number of free buffers immediately.
   *  If timeOut is negative, this function will wait for a buffer to
-  * bocome without timing out.
+  *  become free without timing out.
   *
   * \return The number of free buffers. If an error occured, a negative
-  * value indicating one of the RCReturnCode error codes.
+  * value indicating one of the RCReturnCode error codes is returned.
   *
   */
 
@@ -327,7 +338,8 @@ typedef int (RCCALL *TRCWaitForReady)(int, int);
   *
   * This function queries the maximum sampling rate of the device in Hz.
   * \param handle Device handle as obtained by RCOpenDevice(int handle);
-  * \return The maximum sampling rate of the device in Hz.
+  * \return The maximum sampling rate of the device in Hz. If an error occured,
+  * a negative value indicating one of the RCReturnCode error codes is returned.
   */
 int RCAPI RCMaxSpeed(int handle);
 /** Function type definition for RCMaxSpeed() */
@@ -342,8 +354,9 @@ typedef int (RCCALL *TRCMaxSpeed)(int);
  * \param count number of points that should be written
  * \param speed sampling rate in Hz that should be used for this frame
  * \param repeat how often this frame should be repeated. If 0, the frame
- * will be repeated continuosly until a new frame is written.
- * \return RCOK on success,
+ * will be repeated continuously until a new frame is written.
+ * \return RCOk on success. If an error occured, a negative value indicating
+ * one of the RCReturnCode error codes is returned.
  *
  */
 
@@ -367,7 +380,9 @@ typedef int (RCCALL *TRCWriteFrame)(int, struct RCPoint *, unsigned int, unsigne
   *
   * \param handle Device handle as obtained by RCOpenDevice()
   *
-  * \return The number of universes.
+  * \return The number of universes present on the device. If an error
+  * occured, a negative value indicating one of the RCReturnCode error
+  * codes is returned.
   */
 int RCAPI RCUniverseCount(int handle);
 /** Function type definition for RCUniverseCount() */
@@ -390,7 +405,9 @@ typedef int (RCCALL *TRCUniverseCount)(int);
   * \param pChannelCount Pointer to Channel count. Will be set the the channel
   * count of the universe
   *
-  * \return The number of characters written to universeName.
+  * \return The number of characters written to universeName. If an error
+  * occured, a negative value indicating one of the RCReturnCode error
+  * codes is returned.
   */
 int RCAPI RCUniverseQuery(int handle, unsigned int universeIndex, char *universeName, unsigned int maxLength, enum RCUniverseDirection *pUniverseDirection, unsigned int *pChannelCount);
 /** Function type definition for RCUniverseQuery() */
@@ -403,9 +420,10 @@ typedef int (RCCALL *TRCUniverseQuery)(int, unsigned int, char *, unsigned int, 
   * returned by RCUniverseCount() -1
   * \param startChannel First channel to write. startChannel 0 is the first DMX channel.
   * \param data Pointer to dmx value buffer
-  * \param count Number of channels to read
+  * \param count Number of channels to write
   *
-  * \return The number of characters written to universeName.
+  * \return RCOk on success. If an error occured, a negative value indicating
+  * one of the RCReturnCode error codes is returned.
   */
 int RCAPI RCUniverseWrite(int handle, unsigned int universeIndex, unsigned int startChannel, unsigned char *data, unsigned int count);
 /** Function type definition for RCUniverseWrite() */
@@ -420,7 +438,8 @@ typedef int (RCCALL *TRCUniverseWrite)(int, unsigned int, unsigned int, unsigned
   * \param data Pointer to dmx value buffer
   * \param count Number of channels to read
   *
-  * \return RCOk on success.
+  * \return RCOk on success. If an error occured, a negative value indicating
+  * one of the RCReturnCode error codes is returned.
   */
 int RCAPI RCUniverseRead(int handle, unsigned int universeIndex, unsigned int startChannel, unsigned char *data, unsigned int count);
 /** Function type definition for RCUniverseRead() */
@@ -431,8 +450,9 @@ typedef int (RCCALL *TRCUniverseRead)(int, unsigned int, unsigned int, unsigned 
   * \param handle Device handle as obtained by RCOpenDevice()
   * \param universeIndex Universe Index. Range is 0 to the number
   * returned by RCUniverseCount() -1
-
-  * \return RCOk on success.
+  *
+  * \return RCOk on success. If an error occured, a negative value indicating
+  * one of the RCReturnCode error codes is returned.
   */
 int RCAPI RCUniverseUpdate(int handle, unsigned int universeIndex);
 /** Function type definition for RCUniverseUpdate() */
