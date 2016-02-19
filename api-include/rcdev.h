@@ -42,7 +42,7 @@ extern "C" {
 /** API Version */
 #define RCAPI_VERSION 0x0100
 
-#if defined(_MSC_VER)
+#if defined(_MSC_VER) || defined(__MINGW32__)
   /** Calling Convention of function pointers */
   #define RCCALL __stdcall
   //  Microsoft
