@@ -31,8 +31,8 @@
   * Permission is granted to use this API, the provided samples and documentation free of
   * charge als long as they are used for controling RayComposer devices.
   *
-  * Last Update: 18.08.2015
-  * Fixing some Documentation typos - RA
+  * Last Update: 19.02.2016
+  * -check for mingw32 in windows as well
   */
 
 #ifdef __cplusplus
