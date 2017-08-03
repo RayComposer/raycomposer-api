@@ -3,7 +3,7 @@
 
 /** \file rcdev.h
   *  \brief RayComposer public device API
-  *  \version 1.00
+  *  \version 1.06
   *
   *  This file contains the API definition for the public
   *  RayComposer devices API.
@@ -11,14 +11,14 @@
   *
   * \section Introduction
   *
-  * Although RayComposer offers a complete set of tools to create laser shows,
-  * some of you asked if they can use the RayComposer laser show devices
-  * with their custom (or third party) software. To fulfill your wish, this
-  * API (Application Programming Interface) was designed. It allows easy access
-  * to the RayComposer devices from most programming languages. Have fun and
-  * be creative!
+  * This API (Application Programming Interface) was designed to allow low-level
+  * hardware access to the RayComposer ILDA DAC devices (RayComposer USB and RayComposer NET)
+  * from your custom (or third-party) application software. The API functions only use simple
+  * data types to enable compatibility with a large number of programming languages.
   *
-  *  <a href="http://www.raycomposer.de">Copyright &copy;2015 RayComposer - R. Adams</a>.
+  * Have fun and be creative!
+  *
+  *  <a href="http://www.raycomposer.de">Copyright &copy;2015-2017 RayComposer - R. Adams</a>.
   *
   * \section Code Example
   * Quick Example in plain C. This code enumerates all devices and displays a list.
@@ -31,8 +31,10 @@
   * Permission is granted to use this API, the provided samples and documentation free of
   * charge als long as they are used for controling RayComposer devices.
   *
-  * Last Update: 19.02.2016
-  * -check for mingw32 in windows as well
+  * Last Update: 03.08.2017
+  * - XY output signals were inverted wrt the specification; fixed since version 1.05
+  * - input string and data pointers declared as "const" now
+  * - check for mingw32 in windows as well
   */
 
 #ifdef __cplusplus
@@ -40,7 +42,7 @@ extern "C" {
 #endif
 
 /** API Version */
-#define RCAPI_VERSION 0x0100
+#define RCAPI_VERSION 0x0106
 
 #if defined(_MSC_VER) || defined(__MINGW32__)
   /** Calling Convention of function pointers */
@@ -142,7 +144,7 @@ struct RCPoint {
   *
   * This function must be called before all other API calls can be used.
   *
-  * \return Returns the DLL API Version on success. Currently this is 0x0100.
+  * \return Returns the DLL API Version on success. Currently this is 0x0106.
   */
 int RCAPI RCInit();
 /** Function type definition for RCInit() */
@@ -170,6 +172,10 @@ typedef int (RCCALL *TRCExit)();
   * Looks for RayComposer devices and update the internal device list.
   * The number of devices in the device list is returned.
   * Use RCDeviceID() afterwards to query the device list.
+  *
+  * For RayComposer NET devices please allow a small amount of time to
+  * pass after RCInit() and before calling RCEnumerateDevices(). Usually
+  * a delay of 10ms is sufficient for devices to be discovered on the network.
   *
   * \return The number of devices found. If an error occured, a negative
   * value indicating one of the RCReturnCode error codes is returned.
@@ -225,9 +231,9 @@ typedef int (RCCALL *TRCDeviceID)(unsigned int, char *, unsigned int);
  * opened. The return value indicates one of the RCReturnCode error codes.
  *
  */
-int RCAPI RCOpenDevice(char *deviceId);
+int RCAPI RCOpenDevice(const char *deviceId);
 /** Function type definition for RCOpenDevice() */
-typedef int (RCCALL *TRCOpenDevice)(char *);
+typedef int (RCCALL *TRCOpenDevice)(const char *);
 
 
 /** \brief Close Device
@@ -275,9 +281,9 @@ typedef int (RCCALL *TRCDeviceLabel)(int, char *, unsigned int);
   * \return RCOk on success. If an error occured, a negative
   * value indicating one of the RCReturnCode error codes is returned.
   */
-int RCAPI RCSetDeviceLabel(int handle, char *deviceLabel);
+int RCAPI RCSetDeviceLabel(int handle, const char *deviceLabel);
 /** Function type definition for RCSetDeviceLabel() */
-typedef int (RCCALL *TRCSetDeviceLabel)(int, char *);
+typedef int (RCCALL *TRCSetDeviceLabel)(int, const char *);
 
 /** @} */
 
@@ -360,9 +366,9 @@ typedef int (RCCALL *TRCMaxSpeed)(int);
  *
  */
 
-int RCAPI RCWriteFrame(int handle, struct RCPoint *points, unsigned int count, unsigned int speed, unsigned int repeat);
+int RCAPI RCWriteFrame(int handle, const struct RCPoint *points, unsigned int count, unsigned int speed, unsigned int repeat);
 /** Function type definition for RCWriteFrame() */
-typedef int (RCCALL *TRCWriteFrame)(int, struct RCPoint *, unsigned int, unsigned int, unsigned int);
+typedef int (RCCALL *TRCWriteFrame)(int, const struct RCPoint *, unsigned int, unsigned int, unsigned int);
 
 /** @} */
 
@@ -425,9 +431,9 @@ typedef int (RCCALL *TRCUniverseQuery)(int, unsigned int, char *, unsigned int, 
   * \return RCOk on success. If an error occured, a negative value indicating
   * one of the RCReturnCode error codes is returned.
   */
-int RCAPI RCUniverseWrite(int handle, unsigned int universeIndex, unsigned int startChannel, unsigned char *data, unsigned int count);
+int RCAPI RCUniverseWrite(int handle, unsigned int universeIndex, unsigned int startChannel, const unsigned char *data, unsigned int count);
 /** Function type definition for RCUniverseWrite() */
-typedef int (RCCALL *TRCUniverseWrite)(int, unsigned int, unsigned int, unsigned char *, unsigned int);
+typedef int (RCCALL *TRCUniverseWrite)(int, unsigned int, unsigned int, const unsigned char *, unsigned int);
 
 /** \brief Read from input universe
   *

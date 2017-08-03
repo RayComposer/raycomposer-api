@@ -7,15 +7,15 @@ var searchData=
   ['trcexit',['TRCExit',['../group__init.html#ga3652b60fe0096b3c66e2b39339ef40e1',1,'rcdev.h']]],
   ['trcinit',['TRCInit',['../group__init.html#ga8e9b1aa2b9acbdeb444b1a016a0fcd4f',1,'rcdev.h']]],
   ['trcmaxspeed',['TRCMaxSpeed',['../group__output.html#gab1df5c57894690690d93e4e8e8900eb4',1,'rcdev.h']]],
-  ['trcopendevice',['TRCOpenDevice',['../group__access.html#ga329e25109a87af3d504f7eb643e56dad',1,'rcdev.h']]],
-  ['trcsetdevicelabel',['TRCSetDeviceLabel',['../group__access.html#ga429b29b9e7e233a58a27c2f7db9b6b70',1,'rcdev.h']]],
+  ['trcopendevice',['TRCOpenDevice',['../group__access.html#ga03351321f342d9709e94ea9cfb3fb10f',1,'rcdev.h']]],
+  ['trcsetdevicelabel',['TRCSetDeviceLabel',['../group__access.html#gac8fa96b401afbe5d97f04527c52e4488',1,'rcdev.h']]],
   ['trcstartoutput',['TRCStartOutput',['../group__output.html#gafb9ef82a1f030ac6aebf9db689772735',1,'rcdev.h']]],
   ['trcstopoutput',['TRCStopOutput',['../group__output.html#ga10f6906b5d31be45ac253b77d24a11e8',1,'rcdev.h']]],
   ['trcuniversecount',['TRCUniverseCount',['../group__universes.html#ga5b2c7ff56164aa46792982f3a5c9ba5e',1,'rcdev.h']]],
   ['trcuniversequery',['TRCUniverseQuery',['../group__universes.html#ga8df05b3118527b58b1b6c1f1838d5b22',1,'rcdev.h']]],
   ['trcuniverseread',['TRCUniverseRead',['../group__universes.html#gabedd41f58576c83f0f95fd3b2711e119',1,'rcdev.h']]],
   ['trcuniverseupdate',['TRCUniverseUpdate',['../group__universes.html#ga08e9c0b9c9f133e9fa34514d94f46640',1,'rcdev.h']]],
-  ['trcuniversewrite',['TRCUniverseWrite',['../group__universes.html#ga78d78f96f73af037c6916eb5d990d18a',1,'rcdev.h']]],
+  ['trcuniversewrite',['TRCUniverseWrite',['../group__universes.html#ga0a7eaba6b07b8c1e3e9c4b23e4c128de',1,'rcdev.h']]],
   ['trcwaitforready',['TRCWaitForReady',['../group__output.html#ga8ce70f652b0f6618c4370f1c6dd3211f',1,'rcdev.h']]],
-  ['trcwriteframe',['TRCWriteFrame',['../group__output.html#gaeaf8421af712190207d2d713fe2012ab',1,'rcdev.h']]]
+  ['trcwriteframe',['TRCWriteFrame',['../group__output.html#ga987c91ac5748b1d56d2f17aab5bc23f8',1,'rcdev.h']]]
 ];

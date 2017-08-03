@@ -1,12 +1,13 @@
 API for RayComposer Laser Show Devices
 ======================================
-Although [RayComposer](http://www.raycomposer.com) offers a complete set of tools to create laser shows,
-some of you asked if they can use the [RayComposer](http://www.raycomposer.com) laser show devices with their
-own (or some third party) software.
+This API (Application Programming Interface) was designed to allow low-level hardware access to the
+[RayComposer ILDA DAC devices](http://www.raycomposer.com) ([RayComposer USB](http://www.raycomposer.de/en/ilda-dac-interfaces/raycomposer-usb/) and [RayComposer NET](http://www.raycomposer.de/en/ilda-dac-ausgabekarten/raycomposer-net/)) from your custom (or third-party)
+application software. The API functions only use simple data types to enable compatibility with a large
+number of programming languages.
 
-To fulfill your wish, this API (Application Programming Interface) was designed.
-It allows easy access to the [RayComposer](http://www.raycomposer.com)  devices from most programming languages.
-Have fun and be creative.
+Have fun and be creative!
+
+Copyright ©2015-2017 RayComposer - R. Adams.
 
 Documentation
 -------------
@@ -16,4 +17,4 @@ License
 -------
 You may use this API, the provided documentation and samples free of charge as
 long as you use it to drive RayComposer hardware.
-(C) 2015 RayComposer - Robin Adams
+(C) 2015-2017 RayComposer - Robin Adams

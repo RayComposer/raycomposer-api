@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>RayComposer Device API Documentation: /home/radams/raycomposer/api-git/raycomposer-api/api-src/rcdev.h File Reference</title>
+<title>RayComposer Device API Documentation: /home/radams/raycomposer/api-git/raycomposer-api/api-include/rcdev.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">RayComposer Device API Documentation
-   &#160;<span id="projectnumber">1.40</span>
+   &#160;<span id="projectnumber">1.6</span>
    </div>
    <div id="projectbrief">Public API for RayComposer laser show DAC interfaces.</div>
   </td>
@@ -128,7 +128,7 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a997e9fc9fd20c59f7ac97a26470f501a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rcdev_8h.html#a997e9fc9fd20c59f7ac97a26470f501a">RCAPI_VERSION</a>&#160;&#160;&#160;0x0100</td></tr>
+<tr class="memitem:a997e9fc9fd20c59f7ac97a26470f501a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rcdev_8h.html#a997e9fc9fd20c59f7ac97a26470f501a">RCAPI_VERSION</a>&#160;&#160;&#160;0x0106</td></tr>
 <tr class="separator:a997e9fc9fd20c59f7ac97a26470f501a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2225aaceacd0f3a67cdbb7ee69e89846"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rcdev_8h.html#a2225aaceacd0f3a67cdbb7ee69e89846">RCCALL</a></td></tr>
 <tr class="separator:a2225aaceacd0f3a67cdbb7ee69e89846"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,14 +145,14 @@ Typedefs</h2></td></tr>
 <tr class="separator:gafa72fc20b3b5906264d3db7db8b5d12c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae548b15c0d763aadee9fc90f21f78b13"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="rcdev_8h.html#a2225aaceacd0f3a67cdbb7ee69e89846">RCCALL</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__enum.html#gae548b15c0d763aadee9fc90f21f78b13">TRCDeviceID</a> )(unsigned int, char *, unsigned int)</td></tr>
 <tr class="separator:gae548b15c0d763aadee9fc90f21f78b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga329e25109a87af3d504f7eb643e56dad"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="rcdev_8h.html#a2225aaceacd0f3a67cdbb7ee69e89846">RCCALL</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__access.html#ga329e25109a87af3d504f7eb643e56dad">TRCOpenDevice</a> )(char *)</td></tr>
-<tr class="separator:ga329e25109a87af3d504f7eb643e56dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga03351321f342d9709e94ea9cfb3fb10f"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="rcdev_8h.html#a2225aaceacd0f3a67cdbb7ee69e89846">RCCALL</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__access.html#ga03351321f342d9709e94ea9cfb3fb10f">TRCOpenDevice</a> )(const char *)</td></tr>
+<tr class="separator:ga03351321f342d9709e94ea9cfb3fb10f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1d00546135de01dab14023dd7362f914"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="rcdev_8h.html#a2225aaceacd0f3a67cdbb7ee69e89846">RCCALL</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__access.html#ga1d00546135de01dab14023dd7362f914">TRCCloseDevice</a> )(int)</td></tr>
 <tr class="separator:ga1d00546135de01dab14023dd7362f914"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3979710fd56f64321c98976f742c10f1"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="rcdev_8h.html#a2225aaceacd0f3a67cdbb7ee69e89846">RCCALL</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__access.html#ga3979710fd56f64321c98976f742c10f1">TRCDeviceLabel</a> )(int, char *, unsigned int)</td></tr>
 <tr class="separator:ga3979710fd56f64321c98976f742c10f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga429b29b9e7e233a58a27c2f7db9b6b70"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="rcdev_8h.html#a2225aaceacd0f3a67cdbb7ee69e89846">RCCALL</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__access.html#ga429b29b9e7e233a58a27c2f7db9b6b70">TRCSetDeviceLabel</a> )(int, char *)</td></tr>
-<tr class="separator:ga429b29b9e7e233a58a27c2f7db9b6b70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac8fa96b401afbe5d97f04527c52e4488"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="rcdev_8h.html#a2225aaceacd0f3a67cdbb7ee69e89846">RCCALL</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__access.html#gac8fa96b401afbe5d97f04527c52e4488">TRCSetDeviceLabel</a> )(int, const char *)</td></tr>
+<tr class="separator:gac8fa96b401afbe5d97f04527c52e4488"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafb9ef82a1f030ac6aebf9db689772735"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="rcdev_8h.html#a2225aaceacd0f3a67cdbb7ee69e89846">RCCALL</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__output.html#gafb9ef82a1f030ac6aebf9db689772735">TRCStartOutput</a> )(int)</td></tr>
 <tr class="separator:gafb9ef82a1f030ac6aebf9db689772735"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga10f6906b5d31be45ac253b77d24a11e8"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="rcdev_8h.html#a2225aaceacd0f3a67cdbb7ee69e89846">RCCALL</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__output.html#ga10f6906b5d31be45ac253b77d24a11e8">TRCStopOutput</a> )(int)</td></tr>
@@ -161,14 +161,14 @@ Typedefs</h2></td></tr>
 <tr class="separator:ga8ce70f652b0f6618c4370f1c6dd3211f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab1df5c57894690690d93e4e8e8900eb4"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="rcdev_8h.html#a2225aaceacd0f3a67cdbb7ee69e89846">RCCALL</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__output.html#gab1df5c57894690690d93e4e8e8900eb4">TRCMaxSpeed</a> )(int)</td></tr>
 <tr class="separator:gab1df5c57894690690d93e4e8e8900eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaeaf8421af712190207d2d713fe2012ab"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="rcdev_8h.html#a2225aaceacd0f3a67cdbb7ee69e89846">RCCALL</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__output.html#gaeaf8421af712190207d2d713fe2012ab">TRCWriteFrame</a> )(int, struct <a class="el" href="struct_r_c_point.html">RCPoint</a> *, unsigned int, unsigned int, unsigned int)</td></tr>
-<tr class="separator:gaeaf8421af712190207d2d713fe2012ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga987c91ac5748b1d56d2f17aab5bc23f8"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="rcdev_8h.html#a2225aaceacd0f3a67cdbb7ee69e89846">RCCALL</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__output.html#ga987c91ac5748b1d56d2f17aab5bc23f8">TRCWriteFrame</a> )(int, const struct <a class="el" href="struct_r_c_point.html">RCPoint</a> *, unsigned int, unsigned int, unsigned int)</td></tr>
+<tr class="separator:ga987c91ac5748b1d56d2f17aab5bc23f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5b2c7ff56164aa46792982f3a5c9ba5e"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="rcdev_8h.html#a2225aaceacd0f3a67cdbb7ee69e89846">RCCALL</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__universes.html#ga5b2c7ff56164aa46792982f3a5c9ba5e">TRCUniverseCount</a> )(int)</td></tr>
 <tr class="separator:ga5b2c7ff56164aa46792982f3a5c9ba5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8df05b3118527b58b1b6c1f1838d5b22"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="rcdev_8h.html#a2225aaceacd0f3a67cdbb7ee69e89846">RCCALL</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__universes.html#ga8df05b3118527b58b1b6c1f1838d5b22">TRCUniverseQuery</a> )(int, unsigned int, char *, unsigned int, enum <a class="el" href="rcdev_8h.html#a0bbde054c14a114a6ff13e64c5686529">RCUniverseDirection</a> *, unsigned int *)</td></tr>
 <tr class="separator:ga8df05b3118527b58b1b6c1f1838d5b22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga78d78f96f73af037c6916eb5d990d18a"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="rcdev_8h.html#a2225aaceacd0f3a67cdbb7ee69e89846">RCCALL</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__universes.html#ga78d78f96f73af037c6916eb5d990d18a">TRCUniverseWrite</a> )(int, unsigned int, unsigned int, unsigned char *, unsigned int)</td></tr>
-<tr class="separator:ga78d78f96f73af037c6916eb5d990d18a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0a7eaba6b07b8c1e3e9c4b23e4c128de"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="rcdev_8h.html#a2225aaceacd0f3a67cdbb7ee69e89846">RCCALL</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__universes.html#ga0a7eaba6b07b8c1e3e9c4b23e4c128de">TRCUniverseWrite</a> )(int, unsigned int, unsigned int, const unsigned char *, unsigned int)</td></tr>
+<tr class="separator:ga0a7eaba6b07b8c1e3e9c4b23e4c128de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabedd41f58576c83f0f95fd3b2711e119"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="rcdev_8h.html#a2225aaceacd0f3a67cdbb7ee69e89846">RCCALL</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__universes.html#gabedd41f58576c83f0f95fd3b2711e119">TRCUniverseRead</a> )(int, unsigned int, unsigned int, unsigned char *, unsigned int)</td></tr>
 <tr class="separator:gabedd41f58576c83f0f95fd3b2711e119"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga08e9c0b9c9f133e9fa34514d94f46640"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="rcdev_8h.html#a2225aaceacd0f3a67cdbb7ee69e89846">RCCALL</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__universes.html#ga08e9c0b9c9f133e9fa34514d94f46640">TRCUniverseUpdate</a> )(int, unsigned int)</td></tr>
@@ -210,18 +210,18 @@ Functions</h2></td></tr>
 <tr class="memitem:ga6caaccf8a3a6e38f018237c36efc8efa"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="rcdev_8h.html#ae2104c3b6bc7fd6f80199506897571b0">RCAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__enum.html#ga6caaccf8a3a6e38f018237c36efc8efa">RCDeviceID</a> (unsigned int index, char *deviceId, unsigned int maxLength)</td></tr>
 <tr class="memdesc:ga6caaccf8a3a6e38f018237c36efc8efa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read Device ID.  <a href="group__enum.html#ga6caaccf8a3a6e38f018237c36efc8efa">More...</a><br /></td></tr>
 <tr class="separator:ga6caaccf8a3a6e38f018237c36efc8efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8c5583a910094fa3125d4b2537e2838e"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="rcdev_8h.html#ae2104c3b6bc7fd6f80199506897571b0">RCAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__access.html#ga8c5583a910094fa3125d4b2537e2838e">RCOpenDevice</a> (char *deviceId)</td></tr>
-<tr class="memdesc:ga8c5583a910094fa3125d4b2537e2838e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open Device.  <a href="group__access.html#ga8c5583a910094fa3125d4b2537e2838e">More...</a><br /></td></tr>
-<tr class="separator:ga8c5583a910094fa3125d4b2537e2838e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadcba65190a2331ab2ae8816289a652f8"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="rcdev_8h.html#ae2104c3b6bc7fd6f80199506897571b0">RCAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__access.html#gadcba65190a2331ab2ae8816289a652f8">RCOpenDevice</a> (const char *deviceId)</td></tr>
+<tr class="memdesc:gadcba65190a2331ab2ae8816289a652f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open Device.  <a href="group__access.html#gadcba65190a2331ab2ae8816289a652f8">More...</a><br /></td></tr>
+<tr class="separator:gadcba65190a2331ab2ae8816289a652f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga17441f78ad085f5a9ef20c70785c603f"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="rcdev_8h.html#ae2104c3b6bc7fd6f80199506897571b0">RCAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__access.html#ga17441f78ad085f5a9ef20c70785c603f">RCCloseDevice</a> (int handle)</td></tr>
 <tr class="memdesc:ga17441f78ad085f5a9ef20c70785c603f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close Device.  <a href="group__access.html#ga17441f78ad085f5a9ef20c70785c603f">More...</a><br /></td></tr>
 <tr class="separator:ga17441f78ad085f5a9ef20c70785c603f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabd0f9fbd193e27b1e473ca7af0ed12b8"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="rcdev_8h.html#ae2104c3b6bc7fd6f80199506897571b0">RCAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__access.html#gabd0f9fbd193e27b1e473ca7af0ed12b8">RCDeviceLabel</a> (int handle, char *deviceLabel, unsigned int maxLength)</td></tr>
 <tr class="memdesc:gabd0f9fbd193e27b1e473ca7af0ed12b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the device label.  <a href="group__access.html#gabd0f9fbd193e27b1e473ca7af0ed12b8">More...</a><br /></td></tr>
 <tr class="separator:gabd0f9fbd193e27b1e473ca7af0ed12b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga10ada56d97edcabac1af7178e825b88e"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="rcdev_8h.html#ae2104c3b6bc7fd6f80199506897571b0">RCAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__access.html#ga10ada56d97edcabac1af7178e825b88e">RCSetDeviceLabel</a> (int handle, char *deviceLabel)</td></tr>
-<tr class="memdesc:ga10ada56d97edcabac1af7178e825b88e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the device label.  <a href="group__access.html#ga10ada56d97edcabac1af7178e825b88e">More...</a><br /></td></tr>
-<tr class="separator:ga10ada56d97edcabac1af7178e825b88e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf92a212b4158006f495850760a9357b1"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="rcdev_8h.html#ae2104c3b6bc7fd6f80199506897571b0">RCAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__access.html#gaf92a212b4158006f495850760a9357b1">RCSetDeviceLabel</a> (int handle, const char *deviceLabel)</td></tr>
+<tr class="memdesc:gaf92a212b4158006f495850760a9357b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the device label.  <a href="group__access.html#gaf92a212b4158006f495850760a9357b1">More...</a><br /></td></tr>
+<tr class="separator:gaf92a212b4158006f495850760a9357b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac2c538e8ba0d1e8dc2911fbdb2ca7d3a"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="rcdev_8h.html#ae2104c3b6bc7fd6f80199506897571b0">RCAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__output.html#gac2c538e8ba0d1e8dc2911fbdb2ca7d3a">RCStartOutput</a> (int handle)</td></tr>
 <tr class="memdesc:gac2c538e8ba0d1e8dc2911fbdb2ca7d3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start Laser Output.  <a href="group__output.html#gac2c538e8ba0d1e8dc2911fbdb2ca7d3a">More...</a><br /></td></tr>
 <tr class="separator:gac2c538e8ba0d1e8dc2911fbdb2ca7d3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -234,18 +234,18 @@ Functions</h2></td></tr>
 <tr class="memitem:ga6a4459cc7d12cb1f53766a189207b1e5"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="rcdev_8h.html#ae2104c3b6bc7fd6f80199506897571b0">RCAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__output.html#ga6a4459cc7d12cb1f53766a189207b1e5">RCMaxSpeed</a> (int handle)</td></tr>
 <tr class="memdesc:ga6a4459cc7d12cb1f53766a189207b1e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query maximum sampling rate of the device.  <a href="group__output.html#ga6a4459cc7d12cb1f53766a189207b1e5">More...</a><br /></td></tr>
 <tr class="separator:ga6a4459cc7d12cb1f53766a189207b1e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga74c67ca80d50ec8910015ae23e0ea9ae"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="rcdev_8h.html#ae2104c3b6bc7fd6f80199506897571b0">RCAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__output.html#ga74c67ca80d50ec8910015ae23e0ea9ae">RCWriteFrame</a> (int handle, struct <a class="el" href="struct_r_c_point.html">RCPoint</a> *points, unsigned int count, unsigned int speed, unsigned int repeat)</td></tr>
-<tr class="memdesc:ga74c67ca80d50ec8910015ae23e0ea9ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write Frame.  <a href="group__output.html#ga74c67ca80d50ec8910015ae23e0ea9ae">More...</a><br /></td></tr>
-<tr class="separator:ga74c67ca80d50ec8910015ae23e0ea9ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga415d219a64edf55b0348594c0a1bfdba"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="rcdev_8h.html#ae2104c3b6bc7fd6f80199506897571b0">RCAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__output.html#ga415d219a64edf55b0348594c0a1bfdba">RCWriteFrame</a> (int handle, const struct <a class="el" href="struct_r_c_point.html">RCPoint</a> *points, unsigned int count, unsigned int speed, unsigned int repeat)</td></tr>
+<tr class="memdesc:ga415d219a64edf55b0348594c0a1bfdba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write Frame.  <a href="group__output.html#ga415d219a64edf55b0348594c0a1bfdba">More...</a><br /></td></tr>
+<tr class="separator:ga415d219a64edf55b0348594c0a1bfdba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9b88e638bab9a489e768bcdd22317ef2"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="rcdev_8h.html#ae2104c3b6bc7fd6f80199506897571b0">RCAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__universes.html#ga9b88e638bab9a489e768bcdd22317ef2">RCUniverseCount</a> (int handle)</td></tr>
 <tr class="memdesc:ga9b88e638bab9a489e768bcdd22317ef2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query universe count of device.  <a href="group__universes.html#ga9b88e638bab9a489e768bcdd22317ef2">More...</a><br /></td></tr>
 <tr class="separator:ga9b88e638bab9a489e768bcdd22317ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae5661202dfd24a016111d306f2fa04c0"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="rcdev_8h.html#ae2104c3b6bc7fd6f80199506897571b0">RCAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__universes.html#gae5661202dfd24a016111d306f2fa04c0">RCUniverseQuery</a> (int handle, unsigned int universeIndex, char *universeName, unsigned int maxLength, enum <a class="el" href="rcdev_8h.html#a0bbde054c14a114a6ff13e64c5686529">RCUniverseDirection</a> *pUniverseDirection, unsigned int *pChannelCount)</td></tr>
 <tr class="memdesc:gae5661202dfd24a016111d306f2fa04c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query universe information.  <a href="group__universes.html#gae5661202dfd24a016111d306f2fa04c0">More...</a><br /></td></tr>
 <tr class="separator:gae5661202dfd24a016111d306f2fa04c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga92ce6aa50f2eac37dbf89e92eba0e86c"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="rcdev_8h.html#ae2104c3b6bc7fd6f80199506897571b0">RCAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__universes.html#ga92ce6aa50f2eac37dbf89e92eba0e86c">RCUniverseWrite</a> (int handle, unsigned int universeIndex, unsigned int startChannel, unsigned char *data, unsigned int count)</td></tr>
-<tr class="memdesc:ga92ce6aa50f2eac37dbf89e92eba0e86c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write to output universe.  <a href="group__universes.html#ga92ce6aa50f2eac37dbf89e92eba0e86c">More...</a><br /></td></tr>
-<tr class="separator:ga92ce6aa50f2eac37dbf89e92eba0e86c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac549b4270d5a1548985fbfead3fec378"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="rcdev_8h.html#ae2104c3b6bc7fd6f80199506897571b0">RCAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__universes.html#gac549b4270d5a1548985fbfead3fec378">RCUniverseWrite</a> (int handle, unsigned int universeIndex, unsigned int startChannel, const unsigned char *data, unsigned int count)</td></tr>
+<tr class="memdesc:gac549b4270d5a1548985fbfead3fec378"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write to output universe.  <a href="group__universes.html#gac549b4270d5a1548985fbfead3fec378">More...</a><br /></td></tr>
+<tr class="separator:gac549b4270d5a1548985fbfead3fec378"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa357a7f4fe341fd94ca5bec47a557297"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="rcdev_8h.html#ae2104c3b6bc7fd6f80199506897571b0">RCAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__universes.html#gaa357a7f4fe341fd94ca5bec47a557297">RCUniverseRead</a> (int handle, unsigned int universeIndex, unsigned int startChannel, unsigned char *data, unsigned int count)</td></tr>
 <tr class="memdesc:gaa357a7f4fe341fd94ca5bec47a557297"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read from input universe.  <a href="group__universes.html#gaa357a7f4fe341fd94ca5bec47a557297">More...</a><br /></td></tr>
 <tr class="separator:gaa357a7f4fe341fd94ca5bec47a557297"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -255,7 +255,7 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>RayComposer public device API. </p>
-<dl class="section version"><dt>Version</dt><dd>1.00</dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.06</dd></dl>
 <p>This file contains the API definition for the public RayComposer devices API. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="a997e9fc9fd20c59f7ac97a26470f501a"></a>
@@ -263,7 +263,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define RCAPI_VERSION&#160;&#160;&#160;0x0100</td>
+          <td class="memname">#define RCAPI_VERSION&#160;&#160;&#160;0x0106</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -367,8 +367,8 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_97667c135ea13896865de028b14459b4.html">api-git</a></li><li class="navelem"><a class="el" href="dir_cb3fdc4948fab105106e3eaa83c7003f.html">raycomposer-api</a></li><li class="navelem"><a class="el" href="dir_849a40c070b079d30a9541707611e7a6.html">api-src</a></li><li class="navelem"><a class="el" href="rcdev_8h.html">rcdev.h</a></li>
-    <li class="footer">Generated on Thu Aug 20 2015 16:42:01 for RayComposer Device API Documentation by
+    <li class="navelem"><a class="el" href="dir_97667c135ea13896865de028b14459b4.html">api-git</a></li><li class="navelem"><a class="el" href="dir_cb3fdc4948fab105106e3eaa83c7003f.html">raycomposer-api</a></li><li class="navelem"><a class="el" href="dir_4b97fc3cf045ce6601cf62d013594317.html">api-include</a></li><li class="navelem"><a class="el" href="rcdev_8h.html">rcdev.h</a></li>
+    <li class="footer">Generated on Thu Aug 3 2017 19:40:34 for RayComposer Device API Documentation by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

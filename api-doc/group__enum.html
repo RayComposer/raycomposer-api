@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">RayComposer Device API Documentation
-   &#160;<span id="projectnumber">1.40</span>
+   &#160;<span id="projectnumber">1.6</span>
    </div>
    <div id="projectbrief">Public API for RayComposer laser show DAC interfaces.</div>
   </td>
@@ -170,6 +170,7 @@ Functions</h2></td></tr>
 
 <p>Find devices. </p>
 <p>Looks for RayComposer devices and update the internal device list. The number of devices in the device list is returned. Use <a class="el" href="group__enum.html#ga6caaccf8a3a6e38f018237c36efc8efa" title="Read Device ID. ">RCDeviceID()</a> afterwards to query the device list.</p>
+<p>For RayComposer NET devices please allow a small amount of time to pass after <a class="el" href="group__init.html#ga70539d94407750d7b478bd7c29213471" title="Initialise DLL. ">RCInit()</a> and before calling <a class="el" href="group__enum.html#gaa976a213e5dc8a213fa83c2ba9dfd75d" title="Find devices. ">RCEnumerateDevices()</a>. Usually a delay of 10ms is sufficient for devices to be discovered on the network.</p>
 <dl class="section return"><dt>Returns</dt><dd>The number of devices found. If an error occured, a negative value indicating one of the RCReturnCode error codes is returned. </dd></dl>
 
 </div>
@@ -223,7 +224,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Aug 20 2015 16:42:01 for RayComposer Device API Documentation by
+    <li class="footer">Generated on Thu Aug 3 2017 19:40:34 for RayComposer Device API Documentation by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

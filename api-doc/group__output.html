@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">RayComposer Device API Documentation
-   &#160;<span id="projectnumber">1.40</span>
+   &#160;<span id="projectnumber">1.6</span>
    </div>
    <div id="projectbrief">Public API for RayComposer laser show DAC interfaces.</div>
   </td>
@@ -119,8 +119,8 @@ Typedefs</h2></td></tr>
 <tr class="separator:ga8ce70f652b0f6618c4370f1c6dd3211f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab1df5c57894690690d93e4e8e8900eb4"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="rcdev_8h.html#a2225aaceacd0f3a67cdbb7ee69e89846">RCCALL</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__output.html#gab1df5c57894690690d93e4e8e8900eb4">TRCMaxSpeed</a> )(int)</td></tr>
 <tr class="separator:gab1df5c57894690690d93e4e8e8900eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaeaf8421af712190207d2d713fe2012ab"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="rcdev_8h.html#a2225aaceacd0f3a67cdbb7ee69e89846">RCCALL</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__output.html#gaeaf8421af712190207d2d713fe2012ab">TRCWriteFrame</a> )(int, struct <a class="el" href="struct_r_c_point.html">RCPoint</a> *, unsigned int, unsigned int, unsigned int)</td></tr>
-<tr class="separator:gaeaf8421af712190207d2d713fe2012ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga987c91ac5748b1d56d2f17aab5bc23f8"><td class="memItemLeft" align="right" valign="top">typedef int(<a class="el" href="rcdev_8h.html#a2225aaceacd0f3a67cdbb7ee69e89846">RCCALL</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__output.html#ga987c91ac5748b1d56d2f17aab5bc23f8">TRCWriteFrame</a> )(int, const struct <a class="el" href="struct_r_c_point.html">RCPoint</a> *, unsigned int, unsigned int, unsigned int)</td></tr>
+<tr class="separator:ga987c91ac5748b1d56d2f17aab5bc23f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -136,9 +136,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga6a4459cc7d12cb1f53766a189207b1e5"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="rcdev_8h.html#ae2104c3b6bc7fd6f80199506897571b0">RCAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__output.html#ga6a4459cc7d12cb1f53766a189207b1e5">RCMaxSpeed</a> (int handle)</td></tr>
 <tr class="memdesc:ga6a4459cc7d12cb1f53766a189207b1e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Query maximum sampling rate of the device.  <a href="#ga6a4459cc7d12cb1f53766a189207b1e5">More...</a><br /></td></tr>
 <tr class="separator:ga6a4459cc7d12cb1f53766a189207b1e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga74c67ca80d50ec8910015ae23e0ea9ae"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="rcdev_8h.html#ae2104c3b6bc7fd6f80199506897571b0">RCAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__output.html#ga74c67ca80d50ec8910015ae23e0ea9ae">RCWriteFrame</a> (int handle, struct <a class="el" href="struct_r_c_point.html">RCPoint</a> *points, unsigned int count, unsigned int speed, unsigned int repeat)</td></tr>
-<tr class="memdesc:ga74c67ca80d50ec8910015ae23e0ea9ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write Frame.  <a href="#ga74c67ca80d50ec8910015ae23e0ea9ae">More...</a><br /></td></tr>
-<tr class="separator:ga74c67ca80d50ec8910015ae23e0ea9ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga415d219a64edf55b0348594c0a1bfdba"><td class="memItemLeft" align="right" valign="top">int <a class="el" href="rcdev_8h.html#ae2104c3b6bc7fd6f80199506897571b0">RCAPI</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__output.html#ga415d219a64edf55b0348594c0a1bfdba">RCWriteFrame</a> (int handle, const struct <a class="el" href="struct_r_c_point.html">RCPoint</a> *points, unsigned int count, unsigned int speed, unsigned int repeat)</td></tr>
+<tr class="memdesc:ga415d219a64edf55b0348594c0a1bfdba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write Frame.  <a href="#ga415d219a64edf55b0348594c0a1bfdba">More...</a><br /></td></tr>
+<tr class="separator:ga415d219a64edf55b0348594c0a1bfdba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Start and Stop laser output. Write frames and query buffer status. </p>
@@ -195,16 +195,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="gaeaf8421af712190207d2d713fe2012ab"></a>
+<a class="anchor" id="ga987c91ac5748b1d56d2f17aab5bc23f8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef int(<a class="el" href="rcdev_8h.html#a2225aaceacd0f3a67cdbb7ee69e89846">RCCALL</a> * TRCWriteFrame)(int, struct <a class="el" href="struct_r_c_point.html">RCPoint</a> *, unsigned int, unsigned int, unsigned int)</td>
+          <td class="memname">typedef int(<a class="el" href="rcdev_8h.html#a2225aaceacd0f3a67cdbb7ee69e89846">RCCALL</a> * TRCWriteFrame)(int, const struct <a class="el" href="struct_r_c_point.html">RCPoint</a> *, unsigned int, unsigned int, unsigned int)</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Function type definition for <a class="el" href="group__output.html#ga74c67ca80d50ec8910015ae23e0ea9ae" title="Write Frame. ">RCWriteFrame()</a> </p>
+<p>Function type definition for <a class="el" href="group__output.html#ga415d219a64edf55b0348594c0a1bfdba" title="Write Frame. ">RCWriteFrame()</a> </p>
 
 </div>
 </div>
@@ -227,7 +227,7 @@ Functions</h2></td></tr>
 <p>This function initialises the device and activates the shutter signal.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">handle</td><td>Device handle as obtained by <a class="el" href="group__access.html#ga8c5583a910094fa3125d4b2537e2838e" title="Open Device. ">RCOpenDevice()</a>; </td></tr>
+    <tr><td class="paramname">handle</td><td>Device handle as obtained by <a class="el" href="group__access.html#gadcba65190a2331ab2ae8816289a652f8" title="Open Device. ">RCOpenDevice()</a>; </td></tr>
   </table>
   </dd>
 </dl>
@@ -253,7 +253,7 @@ Functions</h2></td></tr>
 <p>This function stops the laser output and deactivates the shutter signal.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">handle</td><td>Device handle as obtained by <a class="el" href="group__access.html#ga8c5583a910094fa3125d4b2537e2838e" title="Open Device. ">RCOpenDevice()</a>; </td></tr>
+    <tr><td class="paramname">handle</td><td>Device handle as obtained by <a class="el" href="group__access.html#gadcba65190a2331ab2ae8816289a652f8" title="Open Device. ">RCOpenDevice()</a>; </td></tr>
   </table>
   </dd>
 </dl>
@@ -288,7 +288,7 @@ Functions</h2></td></tr>
 <p>Wait for Buffer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">handle</td><td>Device handle as obtained by <a class="el" href="group__access.html#ga8c5583a910094fa3125d4b2537e2838e" title="Open Device. ">RCOpenDevice()</a>; </td></tr>
+    <tr><td class="paramname">handle</td><td>Device handle as obtained by <a class="el" href="group__access.html#gadcba65190a2331ab2ae8816289a652f8" title="Open Device. ">RCOpenDevice()</a>; </td></tr>
     <tr><td class="paramname">timeout</td><td>The maximum time to wait for a buffer to become free in milliseconds.</td></tr>
   </table>
   </dd>
@@ -323,7 +323,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga74c67ca80d50ec8910015ae23e0ea9ae"></a>
+<a class="anchor" id="ga415d219a64edf55b0348594c0a1bfdba"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -336,7 +336,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">struct <a class="el" href="struct_r_c_point.html">RCPoint</a> *&#160;</td>
+          <td class="paramtype">const struct <a class="el" href="struct_r_c_point.html">RCPoint</a> *&#160;</td>
           <td class="paramname"><em>points</em>, </td>
         </tr>
         <tr>
@@ -369,7 +369,7 @@ Functions</h2></td></tr>
 <p>Write a frame to the device.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">handle</td><td>Device handle as obtained by <a class="el" href="group__access.html#ga8c5583a910094fa3125d4b2537e2838e" title="Open Device. ">RCOpenDevice()</a> </td></tr>
+    <tr><td class="paramname">handle</td><td>Device handle as obtained by <a class="el" href="group__access.html#gadcba65190a2331ab2ae8816289a652f8" title="Open Device. ">RCOpenDevice()</a> </td></tr>
     <tr><td class="paramname">points</td><td>pointer to an array of <a class="el" href="struct_r_c_point.html" title="Vector Data Structure. ">RCPoint</a> structures containing the vector data; </td></tr>
     <tr><td class="paramname">count</td><td>number of points that should be written </td></tr>
     <tr><td class="paramname">speed</td><td>sampling rate in Hz that should be used for this frame </td></tr>
@@ -386,7 +386,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Aug 20 2015 16:42:01 for RayComposer Device API Documentation by
+    <li class="footer">Generated on Thu Aug 3 2017 19:40:34 for RayComposer Device API Documentation by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
